@@ -5,10 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+    <form action="">
+        <h4>Рубашка</h4>
+        <input type="radio" name="cover">
+        <label for="">
+            <span>Красная</span>
+        </label>
+        <input type="radio" name="cover">
+        <label for="">
+            <span>Синяя</span>
+        </label>
+        <!-- возможно добавить выбрать свою -->
+        <h4>Запоминать по</h4>
+        <input type="radio" name="method">
+        <label for="">
+            <span>Количеству карт</span>
+        </label>
+        <input type="radio" name="method">
+        <label for="">
+            <span>Времени</span>
+        </label>
+
+        <h4>Укажите нужные характеристики</h4>
+        <input type="number" placeholder="количество времени карт" class="count" required>
+        <input type="number" placeholder="Сколько секунд показывать" class="time" required>
+
+        <input type="submit" value="СТАРТ">
+    </form>
+
+
+    <div class="field">
+        <div class="allCard">
+            <img src="543" class='coverCard'>
+        </div>
+        <div class="selectCard">
+            <img src="" class='targetCard'>
+        </div>
+    </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-Здесь будут находится код который случайным образом вытаскивает карту из колоды и показывает на определенное время. 
-После выхода времени ты должен воспроизвести и программа сравнит сколько верных ответов.
