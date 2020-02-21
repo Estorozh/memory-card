@@ -5,42 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <header>
+        <img src="assets/img/banner.jpg" alt="header" class="logo">
+    </header>
+    <h4>Рубашка</h4>
+    <input type="radio" name="cover">
+    <label for="">
+        <span>Красная</span>
+    </label>
+    <input type="radio" name="cover" checked>
+    <label for="">
+        <span>Синяя</span>
+    </label>
+    <!-- возможно добавить выбрать свою -->
+    <h4>Запоминать по</h4>
+    <input type="radio" name="method">
+    <label for="">
+        <span>Количеству карт</span>
+    </label>
+    <input type="radio" name="method" checked>
+    <label for="">
+        <span>Времени</span>
+    </label>
 
-    <form action="">
-        <h4>Рубашка</h4>
-        <input type="radio" name="cover">
-        <label for="">
-            <span>Красная</span>
-        </label>
-        <input type="radio" name="cover">
-        <label for="">
-            <span>Синяя</span>
-        </label>
-        <!-- возможно добавить выбрать свою -->
-        <h4>Запоминать по</h4>
-        <input type="radio" name="method">
-        <label for="">
-            <span>Количеству карт</span>
-        </label>
-        <input type="radio" name="method">
-        <label for="">
-            <span>Времени</span>
-        </label>
+    <h4>Количество карт</h4>
+    <input type="radio" name="count">
+    <label for="">
+        <span>36</span>
+    </label>
+    <input type="radio" name="count" checked>
+    <label for="">
+        <span>52</span>
+    </label>
 
-        <h4>Укажите нужные характеристики</h4>
-        <input type="number" placeholder="количество времени карт" class="count" required>
-        <input type="number" placeholder="Сколько секунд показывать" class="time" required>
+    <h4>Укажите нужные характеристики</h4>
+    <span>Количество времени карт</span>
+    <input type="text" value="10" class="count" required>
+    <span>Сколько секунд показывать</span>
+    <input type="text" value="1" class="time" required>
 
-        <input type="submit" value="СТАРТ">
-    </form>
+    <button class="btn btn-start">СТАРТ</button>
+    <button class="btn btn-check">Проверить результаты</button>
+    <!-- <input type="submit" value="СТАРТ"> -->
 
 
     <div class="field">
         <div class="allCard">
-            <img src="543" class='coverCard'>
+            <img src="" alt="cover" class='coverCard'>
         </div>
         <div class="selectCard">
             <img src="" class='targetCard'>

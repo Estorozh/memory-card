@@ -1,4 +1,7 @@
-let arr=['christenAce','christenTwo','christenThree','christenFour','christenFive','christenSix','christenSeven','christenEight','christenNine','christenTen','christenJack','christenLady','christenKing'], arrSave = [],countCard = arr.length-1, urlCard = 'assets/img/';
+let arr=['tambourineAce','tambourineTwo','tambourineThree','tambourineFour','tambourineFive','tambourineSix','tambourineSeven','tambourineEight','tambourineNine','tambourineTen','tambourineJack','tambourineLady','tambourineKing','peaksAce','peaksTwo','peaksThree','peaksFour','peaksFive','peaksSix','peaksSeven','peaksEight','peaksNine','peaksTen','peaksJack','peaksLady','peaksKing','heartAce','heartTwo','heartThree','heartFour','heartFive','heartSix','heartSeven','heartEight','heartNine','heartTen','heartJack','heartLady','heartKing','christenAce','christenTwo','christenThree','christenFour','christenFive','christenSix','christenSeven','christenEight','christenNine','christenTen','christenJack','christenLady','christenKing'], 
+    arrSave = [],
+    countCard = arr.length-1, 
+    urlCard = 'assets/img/cards/';
 
 function randomInteger(min, max) {
     let rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -49,17 +52,31 @@ function control() {
 function start(allTime,showTime) {
     function playTime(allTime,showTime) {
         time = setInterval(()=> { document.querySelector('.targetCard').src = control(); },showTime*1000);
-        setTimeout(()=> { clearInterval(time) }, allTime*1000);
+        setTimeout(()=> { 
+            clearInterval(time); 
+            document.querySelector('.targetCard').src = ''; 
+        }, allTime*1000);
     }
     
     playTime(allTime,showTime);
 }
 
 // Сделаю пока по умолчанию рубашку
-function defCover(nameCover = 'assets/img/blueCover.png') {
+function defCover(nameCover = 'assets/img/cards/blueCover.png') {
     document.querySelector('.coverCard').src = nameCover;
 }
 defCover();
 
 // Старт должен отрабатывать на кнопку Старт во вьюхе и принимать два параметра общее время в секундах и время показа в секундах
-start(10,1);
+// start(20,1);
+
+function view() {
+    let btnStart = document.querySelector('.btn-start'),
+        allTime = +document.querySelector('.count').value,
+        showTime = +document.querySelector('.time').value;
+    btnStart.addEventListener('click', function () {
+        start(allTime, showTime);
+    })
+}
+
+view();
