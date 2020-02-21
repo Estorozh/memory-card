@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+:root {
+    --color: #1b6e80;
+}
+body {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+.logo {
+    width: 100%;
+    box-shadow: 0 4px 5px rgba(0,0,0,.5);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.field {
+    display: flex;
+    width: 625px;
+    border-radius: 6px;
+    border: 3px solid #ccc;
+    padding: 40px;
+}
+
+.settings {
+    width: 35%;
+}
+input[type="radio"] {
+    display: none;
+}
+.redCover, .blueCover {
+    display: inline-block;
+    width: 36px; height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.blueCover {
+    background-image: url('../img/cards/blueCover.png');
+}
+.redCover {
+    background-image: url('../img/cards/redCover.png');
+}
+.methodCount, .methodTime, .smallCount, .bigCount {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+input + .visibleToggle span:before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 0; left: 0;
+}
+input:checked + .visibleToggle span:before {
+    border: 1px solid var(--color);
+}
+input:checked + .visibleToggle span:after {
+    content: '';
+    position: absolute;
+    background-color: var(--color);
+    border: 1px solid var(--color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 2px; left: 2px;
+}

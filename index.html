@@ -5,62 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/reset.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
     <header>
         <img src="assets/img/banner.jpg" alt="header" class="logo">
     </header>
-    <h4>Рубашка</h4>
-    <input type="radio" name="cover">
-    <label for="">
-        <span>Красная</span>
-    </label>
-    <input type="radio" name="cover" checked>
-    <label for="">
-        <span>Синяя</span>
-    </label>
-    <!-- возможно добавить выбрать свою -->
-    <h4>Запоминать по</h4>
-    <input type="radio" name="method">
-    <label for="">
-        <span>Количеству карт</span>
-    </label>
-    <input type="radio" name="method" checked>
-    <label for="">
-        <span>Времени</span>
-    </label>
-
-    <h4>Количество карт</h4>
-    <input type="radio" name="count">
-    <label for="">
-        <span>36</span>
-    </label>
-    <input type="radio" name="count" checked>
-    <label for="">
-        <span>52</span>
-    </label>
-
-    <h4>Укажите нужные характеристики</h4>
-    <span>Количество времени карт</span>
-    <input type="text" value="10" class="count" required>
-    <span>Сколько секунд показывать</span>
-    <input type="text" value="1" class="time" required>
-
-    <button class="btn btn-start">СТАРТ</button>
-    <button class="btn btn-check">Проверить результаты</button>
-    <!-- <input type="submit" value="СТАРТ"> -->
-
-
-    <div class="field">
-        <div class="allCard">
-            <img src="" alt="cover" class='coverCard'>
+    
+    <main>
+        <div class="field">
+            <div class="allCard">
+                <img src="" alt="cover" class='coverCard'>
+            </div>
+            <div class="selectCard">
+                <img src="" class='targetCard'>
+            </div>
         </div>
-        <div class="selectCard">
-            <img src="" class='targetCard'>
+
+        <div class="settings">
+            <h4>Рубашка</h4>
+            <input type="radio" id="redCover" name="cover">
+            <label for="redCover" onclick="defCover('assets/img/cards/redCover.png'); changeColor('#fb244a');">
+                <span class="redCover"></span>
+            </label>
+            <input type="radio" id="blueCover" name="cover" checked>
+            <label for="blueCover" onclick="defCover('assets/img/cards/blueCover.png'); changeColor('#1b6e80');">
+                <span class="blueCover"></span>
+            </label>
+            <!-- возможно добавить выбрать свою -->
+            <h4>Запоминать по</h4>
+            <input type="radio" id="methodCount" name="method">
+            <label for="methodCount" class="visibleToggle">
+                <span class="methodCount">Количеству карт</span>
+            </label><br>
+            <input type="radio" id="methodTime" name="method" checked>
+            <label for="methodTime" class="visibleToggle">
+                <span class="methodTime">Времени</span>
+            </label>
+
+            <h4>Количество карт</h4>
+            <input type="radio" id="smallCount" name="count">
+            <label for="smallCount" class="visibleToggle">
+                <span class="smallCount">36</span>
+            </label><br>
+            <input type="radio" id="bigCount" name="count" checked>
+            <label for="bigCount" class="visibleToggle">
+                <span class="bigCount">52</span>
+            </label>
+
+            <h4>Укажите нужные характеристики</h4>
+            <span>Количество времени карт</span>
+            <input type="text" value="10" class="count" required><br>
+            <span>Сколько секунд показывать</span>
+            <input type="text" value="1" class="time" required><br>
+
+            <button class="btn btn-start">СТАРТ</button><br>
+            <button class="btn btn-check">Проверить результаты</button>
         </div>
-    </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
 </body>

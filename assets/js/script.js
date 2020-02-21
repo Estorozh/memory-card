@@ -67,6 +67,10 @@ function defCover(nameCover = 'assets/img/cards/blueCover.png') {
 }
 defCover();
 
+function changeColor(color) {
+    document.documentElement.style.setProperty('--color', color);
+}
+
 // Старт должен отрабатывать на кнопку Старт во вьюхе и принимать два параметра общее время в секундах и время показа в секундах
 // start(20,1);
 
