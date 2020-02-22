@@ -23,18 +23,29 @@ h4 {
     margin: 10px 0;
 }
 .field {
+    position: relative;
     display: flex;
     width: 625px;
     border-radius: 6px;
     border: 3px solid #ccc;
     padding: 40px;
+    box-shadow: 0 0 6px rgba(0,0,0,.7);
+    margin-bottom: 20px;
 }
 
 .settings {
+    align-self: baseline;
     width: 35%;
+    background:#ddd;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 0 6px rgba(0,0,0,.7);
 }
 input[type="radio"] {
     display: none;
+}
+.cover {
+    width: 100%;
 }
 .redCover, .blueCover {
     display: inline-block;
@@ -48,6 +59,22 @@ input[type="radio"] {
 .redCover {
     background-image: url('../img/cards/redCover.png');
 }
+.selectCard {
+    margin-left: 40px;
+}
+.method, .countCard {
+    position: relative;
+    display:inline-block;
+    width: calc(50% - 5px);
+    padding-left: 20px;
+}
+.method:before, .countCard:before {
+    content: '';
+    position: absolute;
+    height: 50%; width: 1px;
+    bottom: 0; left: 0;
+    background-color: #191919;
+}
 .methodCount, .methodTime, .smallCount, .bigCount {
     position: relative;
     display: inline-block;
@@ -58,7 +85,7 @@ input + .visibleToggle span:before {
     content: '';
     position: absolute;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -76,4 +103,55 @@ input:checked + .visibleToggle span:after {
     height: 10px;
     border-radius: 50%;
     top: 2px; left: 2px;
+}
+
+.btn {
+    display: block;
+    width: 311px;
+    height: 48px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    background-color: var(--color);
+    background-position: left 10px top 5px, right 10px top 5px;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    font-size: 16px;
+    margin: 10px auto;
+}
+.hide {
+    display: none !important;
+}
+input[type='text'] {
+    border: 0;
+    background-color:transparent;
+    border-bottom: 1px solid #333;
+    width: 50px;
+    text-align: center;
+}
+
+.test {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    background-color: #fff;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 8px;
+    padding: 10px;
+}
+.test label {
+    margin:5px;
 }

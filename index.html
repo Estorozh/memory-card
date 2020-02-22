@@ -19,49 +19,64 @@
                 <img src="" alt="cover" class='coverCard'>
             </div>
             <div class="selectCard">
-                <img src="" class='targetCard'>
+                <img src="assets/img/cards/blackJoker.png" class='targetCard'>
+                <div class="testMemory hide">
+                    <h4>Укажите последовательность карт</h4>
+                    <div class="cardType">
+                        <div class="btnsSelect">
+
+                        </div>
+                    </div>
+                    <button class="btn btn-check">Показать результаты</button>
+                </div>
             </div>
         </div>
 
         <div class="settings">
-            <h4>Рубашка</h4>
-            <input type="radio" id="redCover" name="cover">
-            <label for="redCover" onclick="defCover('assets/img/cards/redCover.png'); changeColor('#fb244a');">
-                <span class="redCover"></span>
-            </label>
-            <input type="radio" id="blueCover" name="cover" checked>
-            <label for="blueCover" onclick="defCover('assets/img/cards/blueCover.png'); changeColor('#1b6e80');">
-                <span class="blueCover"></span>
-            </label>
+            <div class="cover">
+                <h4>Рубашка</h4>
+                <input type="radio" id="redCover" name="cover">
+                <label for="redCover" onclick="defCover('assets/img/cards/redCover.png'); changeColor('#ff8397');">
+                    <span class="redCover"></span>
+                </label>
+                <input type="radio" id="blueCover" name="cover" checked>
+                <label for="blueCover" onclick="defCover('assets/img/cards/blueCover.png'); changeColor('#1b6e80');">
+                    <span class="blueCover"></span>
+                </label>
+            </div>
             <!-- возможно добавить выбрать свою -->
-            <h4>Запоминать по</h4>
-            <input type="radio" id="methodCount" name="method">
-            <label for="methodCount" class="visibleToggle">
-                <span class="methodCount">Количеству карт</span>
-            </label><br>
-            <input type="radio" id="methodTime" name="method" checked>
-            <label for="methodTime" class="visibleToggle">
-                <span class="methodTime">Времени</span>
-            </label>
+            <div class="method">
+                <h4>Запоминать по</h4>
+                <input type="radio" id="methodCount" name="method">
+                <label for="methodCount" class="visibleToggle">
+                    <span class="methodCount">Количеству карт</span>
+                </label><br>
+                <input type="radio" id="methodTime" name="method" checked>
+                <label for="methodTime" class="visibleToggle">
+                    <span class="methodTime">Времени</span>
+                </label>
+            </div>
+            <div class="countCard">
+                <h4>Количество карт</h4>
+                <input type="radio" id="smallCount" name="count">
+                <label for="smallCount" class="visibleToggle" onclick="pack.length = 36;">
+                    <span class="smallCount">36</span>
+                </label><br>
+                <input type="radio" id="bigCount" name="count" checked>
+                <label for="bigCount" class="visibleToggle" onclick="pack.length = 52;">
+                    <span class="bigCount">52</span>
+                </label>
+            </div>
 
-            <h4>Количество карт</h4>
-            <input type="radio" id="smallCount" name="count">
-            <label for="smallCount" class="visibleToggle">
-                <span class="smallCount">36</span>
-            </label><br>
-            <input type="radio" id="bigCount" name="count" checked>
-            <label for="bigCount" class="visibleToggle">
-                <span class="bigCount">52</span>
-            </label>
-
-            <h4>Укажите нужные характеристики</h4>
-            <span>Количество времени карт</span>
-            <input type="text" value="10" class="count" required><br>
-            <span>Сколько секунд показывать</span>
-            <input type="text" value="1" class="time" required><br>
-
-            <button class="btn btn-start">СТАРТ</button><br>
-            <button class="btn btn-check">Проверить результаты</button>
+            <div class="countCard">
+                <h4>Количество <span>времени</span></h4>
+                <input type="text" value="4" class="count" required>
+            </div>
+            <div class="method">
+                <h4>Показывается секунд</h4>
+                <input type="text" value="1" class="time" required>
+            </div>
+            <button class="btn btn-start">СТАРТ</button>
         </div>
     </main>
 
