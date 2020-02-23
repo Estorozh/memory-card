@@ -155,3 +155,30 @@ input[type='text'] {
 .test label {
     margin:5px;
 }
+
+@media screen and (max-width:960px) {
+    .field, .settings {
+        width: 95%;
+    }
+}
+@media screen and (max-width:768px) {
+    .field {
+        padding: 10px;
+    }
+    .selectCard {
+        margin-left: 10px;
+    }
+    .test {
+        bottom: auto;
+        top: 0;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:450px) {
+    .allCard {
+        display: none;
+    }
+    .selectCard {
+        margin: 0 auto;
+    }
+}
