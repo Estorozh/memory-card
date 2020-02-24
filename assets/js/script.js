@@ -164,7 +164,7 @@ function actionBtnSelect() {
             document.querySelector('.test').classList.remove('hide');
             tapBtn.id = +e.target.id - 1;
             tapBtn.elem = e.target;
-        });
+        },{once: true});
     }
 }
 
