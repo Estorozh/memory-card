@@ -1,4 +1,10 @@
-let pack=['tambourineAce','tambourineSix','tambourineSeven','tambourineEight','tambourineNine','tambourineTen','tambourineJack','tambourineLady','tambourineKing','peaksAce','peaksSix','peaksSeven','peaksEight','peaksNine','peaksTen','peaksJack','peaksLady','peaksKing','heartAce','heartSix','heartSeven','heartEight','heartNine','heartTen','heartJack','heartLady','heartKing','christenAce','christenSix','christenSeven','christenEight','christenNine','christenTen','christenJack','christenLady','christenKing','tambourineTwo','tambourineThree','tambourineFour','tambourineFive','peaksTwo','peaksThree','peaksFour','peaksFive','heartTwo','heartThree','heartFour','heartFive','christenTwo','christenThree','christenFour','christenFive'],
+let getPack = function() {
+        let pack=['tambourineAce','tambourineSix','tambourineSeven','tambourineEight','tambourineNine','tambourineTen','tambourineJack','tambourineLady','tambourineKing','peaksAce','peaksSix','peaksSeven','peaksEight','peaksNine','peaksTen','peaksJack','peaksLady','peaksKing','heartAce','heartSix','heartSeven','heartEight','heartNine','heartTen','heartJack','heartLady','heartKing','christenAce','christenSix','christenSeven','christenEight','christenNine','christenTen','christenJack','christenLady','christenKing','tambourineTwo','tambourineThree','tambourineFour','tambourineFive','peaksTwo','peaksThree','peaksFour','peaksFive','heartTwo','heartThree','heartFour','heartFive','christenTwo','christenThree','christenFour','christenFive'];
+        return function() {
+            return pack;
+        }
+    },
+    pack = getPack()(),
     packSave = [],
     countCard = pack.length-1, 
     urlCard = 'assets/img/cards/',
@@ -72,8 +78,11 @@ function changeColor(color) {
 function start() {
     document.querySelector('.testMemory').classList.add('hide');
 
+    pack = getPack()();
+
     let allTime = +document.querySelector('.count').value, 
         showTime = +document.querySelector('.time').value;
+        
     function playTime(allTime,showTime) {
         time = setInterval(()=> { document.querySelector('.targetCard').src = control(); },showTime*1000);
         setTimeout(()=> { 
